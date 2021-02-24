@@ -1,0 +1,61 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+This repository contains the scripts used to analyzed the data reported
+in draft:
+
+**covid19census: U.S. and Italy COVID-19 epidemiological data and
+demographic and health related metrics**
+
+Claudio Zanettini\*, Mohamed Omar\*, Wikum Dinalankara, Eddie Luidy
+Imada, Elizabeth Colantuoni, Giovanni Parmigiani, and Luigi Marchionni.
+
+## Files and folders:
+
+### code
+
+Contains the scripts for retrieving, pre-processing and analyzing the
+data.
+
+-   `code/libraries_functions`: loads the libraries (including
+    `covid19census`).
+
+-   `code/functions_analysis`: contains functions used to pre-process,
+    analyze and summarize data. Functions are documented.
+
+-   `code/us_preprocess`: this is used to retrieve and pre-process U.S
+    data. Execution of this script returns the dataframe used for the
+    analyses (`dat_selected`). A static copy of the dataframe is in
+    `data/all_raw.RDS`.
+
+-   `code/stratified_analysis.R`: it executes all the scripts and
+    perform stratified analyses.
+
+### data
+
+-   `diabetes_confounders.R`: list of confounders selected for analysis.
+
+### objs
+
+-   `dat_diab.RDS`: data used for the analysis.
+
+-   `MRR_stata_diab_5.RDS`: table of results of the regression.
+
+------------------------------------------------------------------------
+
+## Sources and data
+
+The file `data/all_raw.RDS` contains a static copy of the data used for
+the analysis.
+
+Details regarding the data sources as well as functions to extract
+updated COVID-19 data and aggregate them with other socio-economic and
+health related metrics can be found in the [covid19census R
+package](https://github.com/c1au6i0/covid19census). Please refer to the
+package README or documentation for more information regarding the
+variables. The scripts used to import static data are reported in the
+package repository
+[here](https://github.com/c1au6i0/covid19census/data-raw/).
+
+*Note: use package `renv` and `renv.lock` file in parent folder to
+install the same versions of packages that we used.*
